@@ -6,15 +6,23 @@ class View {
   }
 
   bindEvents() {
-    // callback = 
-    $('li').on("click", e => Game.prototype.playMove([0,1]));
+    debugger
+    const player = game.currentPlayer;
+    debugger
+    $('li').on("click", e => {
+      // debugger
+      let posArrayRough = Array.from(e.target.dataset["pos"])
+      let pos = [parseInt(posArrayRough[0]), parseInt(posArrayRough[2])]
+      debugger
+    Game.prototype.playMove(pos);
+    });
     // debugger;
-
+  
     // $('li').data()
   }
-
+  
   makeMove($square) {
-
+    
   }
 
   setupBoard() {
@@ -24,13 +32,13 @@ class View {
     // ul > li, li, li
 
     $('.ttt').append("<ul></ul>");
-
-    for (let colIdx = 0; colIdx < 3; colIdx++) {
+    for (let rowIdx = 0; rowIdx < 3; rowIdx++) {
       
-
-      for (let rowIdx = 0; rowIdx < 3; rowIdx++) {
+      
+      for (let colIdx = 0; colIdx < 3; colIdx++) {
         $('ul').append("<li></li>");
-        $('li').attr('pos', [rowIdx, colIdx]);
+        // debugger
+        $('li').last().attr('data-pos', [ rowIdx, colIdx]);
       }
     }
   }
