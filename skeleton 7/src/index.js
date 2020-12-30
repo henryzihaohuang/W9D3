@@ -1,21 +1,26 @@
-const View = require('./ttt-View.js');
+const View = require('./ttt-view.js');
 const Game = require('./game.js');
 
 
-const game = new Game();
-window.Game = game;
+// const game = new Game();
+// window.Game = game;
 
-const view = new View(game);
-window.View = view;
+// const view = new View(game);
+// window.View = view;
 
 
-document.addEventListener('DOMContentLoaded',function(){
+// document.addEventListener('DOMContentLoaded',function(){
 
-  const newGame = new Game();
+//   const newGame = new Game();
   
-});
+// });
+
+
 
   $(() => {
-    // Your code here
+    const game = new Game();
+    // debugger
+    const view = new View(game, $('.ttt'));
+      view.setupBoard()
   });
 

@@ -2,7 +2,9 @@ const Board = require("./board");
 const MoveError = require("./moveError");
 
 class Game {
+  
   constructor() {
+    // debugger
     this.board = new Board();
     this.currentPlayer = Board.marks[0];
   }

@@ -1,11 +1,22 @@
 class View {
-  constructor(game, $el) {}
+  constructor(game, $el) {
+    // debugger
+  }
 
   bindEvents() {}
 
   makeMove($square) {}
 
-  setupBoard() {}
+  setupBoard() {
+    // append elements to containing tag
+    // ul > li, li, li
+    // ul > li, li, li
+    // ul > li, li, li
+    
+    $('.ttt').append('ul');
+    $('ul').append('li');
+
+  }
 }
 
 module.exports = View;
