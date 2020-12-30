@@ -21,6 +21,7 @@ const Game = require('./game.js');
     const game = new Game();
     // debugger
     const view = new View(game, $('.ttt'));
-      view.setupBoard()
+      view.setupBoard();
+      view.bindEvents();
   });
 
